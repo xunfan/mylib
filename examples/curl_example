@@ -1,0 +1,3 @@
+curl -A Mozilla -s -o /dev/null -H "$HOSTSTR" -w 'Connect: %{time_connect} TTPT: %{time_pretransfer} TTFB: %{time_starttransfer} TotalTime: %{time_total} Bytes: %{size_download}\n' "$PROBE_TARGET" >> $FILENAME
+
+curl -A Mozilla -o miniBD.txt -s -b cmct_cookies.txt https://hdcmct.org/torrents.php?cat411=1&team1=1
